@@ -31,10 +31,10 @@ def decrypt(result, s):
             # Decrypt uppercase characters in result
 
             if resultvalue < 0:
-                resultvalue -= 128
+                resultvalue += 128
                 # There is an issue with repetition, must debug
 
-            result += chr(resultvalue)
+            text += chr(resultvalue)
         return result
     else:
         return "Not a valid ascii string"
